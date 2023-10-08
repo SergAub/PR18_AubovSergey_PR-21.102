@@ -2,7 +2,6 @@ package com.example.pr18_aubovsergey_pr_21102;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,7 +13,7 @@ import android.widget.SimpleCursorTreeAdapter;
 public class EX7 extends AppCompatActivity {
 
     ExpandableListView elvMain;
-    DBEX7 db;
+    DB_EX7 db;
     Button btnNext, btnPrev;
 
     @Override
@@ -28,17 +27,17 @@ public class EX7 extends AppCompatActivity {
         btnPrev.setOnClickListener(v -> {prev();});
 
 // подключаемся к БД
-        db = new DBEX7(this);
+        db = new DB_EX7(this);
         db.open();
 
         // готовим данные по группам для адаптера
         Cursor cursor = db.getCompanyData();
         startManagingCursor(cursor);
         // сопоставление данных и View для групп
-        String[] groupFrom = { DBEX7.COMPANY_COLUMN_NAME };
+        String[] groupFrom = { DB_EX7.COMPANY_COLUMN_NAME };
         int[] groupTo = { android.R.id.text1 };
         // сопоставление данных и View для элементов
-        String[] childFrom = { DBEX7.PHONE_COLUMN_NAME };
+        String[] childFrom = { DB_EX7.PHONE_COLUMN_NAME };
         int[] childTo = { android.R.id.text1 };
 
         // создаем адаптер и настраиваем список
@@ -76,7 +75,7 @@ public class EX7 extends AppCompatActivity {
 
         protected Cursor getChildrenCursor(Cursor groupCursor) {
             // получаем курсор по элементам для конкретной группы
-            int idColumn = groupCursor.getColumnIndex(DBEX7.COMPANY_COLUMN_ID);
+            int idColumn = groupCursor.getColumnIndex(DB_EX7.COMPANY_COLUMN_ID);
             return db.getPhoneData(groupCursor.getInt(idColumn));
         }
     }

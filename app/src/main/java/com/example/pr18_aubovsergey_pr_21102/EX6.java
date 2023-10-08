@@ -18,7 +18,7 @@ public class EX6 extends AppCompatActivity {
 
     private static final int CM_DELETE_ID = 1;
     ListView lvData;
-    DBEX6 db;
+    DB_EX6 db;
     SimpleCursorAdapter scAdapter;
     Cursor cursor;
     Button btnNext, btnPrev;
@@ -34,7 +34,7 @@ public class EX6 extends AppCompatActivity {
         btnPrev.setOnClickListener(v -> {prev();});
 
         // открываем подключение к БД
-        db = new DBEX6(this);
+        db = new DB_EX6(this);
         db.open();
 
         // получаем курсор
@@ -42,7 +42,7 @@ public class EX6 extends AppCompatActivity {
         startManagingCursor(cursor);
 
         // формируем столбцы сопоставления
-        String[] from = new String[] { DBEX6.COLUMN_IMG, DBEX6.COLUMN_TXT };
+        String[] from = new String[] { DB_EX6.COLUMN_IMG, DB_EX6.COLUMN_TXT };
         int[] to = new int[] { R.id.ivImg, R.id.tvText };
 
         // создааем адаптер и настраиваем список

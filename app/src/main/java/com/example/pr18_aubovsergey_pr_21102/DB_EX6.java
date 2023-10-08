@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DBEX6 {
+public class DB_EX6 {
     private static final String DB_NAME = "mydb";
     private static final int DB_VERSION = 1;
     private static final String DB_TABLE = "mytab";
@@ -28,7 +28,7 @@ public class DBEX6 {
     private DBHelper mDBHelper;
     private SQLiteDatabase mDB;
 
-    public DBEX6(Context ctx) {
+    public DB_EX6(Context ctx) {
         mCtx = ctx;
     }
 

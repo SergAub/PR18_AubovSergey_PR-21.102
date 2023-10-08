@@ -16,15 +16,36 @@
     <ListView
         android:id="@+id/lvMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-    </ListView>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        android:onClick="showResult"
-        android:text="@string/box">
-    </Button>
+        android:layout_height="295dp"
+        android:layout_weight="1"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:paddingTop="40dp">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:text="Previous page"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:onClick="showResult"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/box"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
 </LinearLayout>
