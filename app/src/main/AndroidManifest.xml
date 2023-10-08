@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PR18_AubovSergey_PR21102"
         tools:targetApi="31">
         <activity
+            android:name=".EX7"
+            android:exported="false" />
+        <activity
             android:name=".EX6"
             android:exported="false" />
         <activity

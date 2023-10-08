@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -65,7 +64,7 @@ public class EX3 extends AppCompatActivity {
 
         // создаем адаптер
         MySimpleAdapter sAdapter = new MySimpleAdapter(this, data,
-                R.layout.itemex3, from, to);
+                R.layout.item_ex3, from, to);
 
         // определяем список и присваиваем ему адаптер
         lvSimple = (ListView) findViewById(R.id.lvSimple);

@@ -54,7 +54,7 @@ public class EX2 extends AppCompatActivity {
         int[] to = { R.id.tvText, R.id.cbChecked, R.id.ivImg, R.id.cbChecked };
 
         // создаем адаптер
-        SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.itemex2,
+        SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.item_ex2,
                 from, to);
 
         // определяем список и присваиваем ему адаптер

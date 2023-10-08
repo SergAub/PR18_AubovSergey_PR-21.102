@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -55,7 +54,7 @@ public class EX4 extends AppCompatActivity {
         int[] to = { R.id.tvLoad, R.id.pbLoad, R.id.llLoad };
 
         // создаем адаптер
-        SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.itemex4,
+        SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.item_ex4,
                 from, to);
         // Указываем адаптеру свой биндер
         sAdapter.setViewBinder(new MyViewBinder());

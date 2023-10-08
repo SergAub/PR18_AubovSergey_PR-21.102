@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -58,7 +57,7 @@ public class EX5 extends AppCompatActivity {
         int[] to = { R.id.tvText, R.id.ivImg };
 
         // создаем адаптер
-        sAdapter = new SimpleAdapter(this, data, R.layout.itemex5, from, to);
+        sAdapter = new SimpleAdapter(this, data, R.layout.item_ex5, from, to);
 
         // определяем список и присваиваем ему адаптер
         lvSimple = (ListView) findViewById(R.id.lvSimple);

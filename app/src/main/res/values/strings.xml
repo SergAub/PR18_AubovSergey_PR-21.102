@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PR18_AubovSergey_PR-21.102</string>
+    <string name="add_record">Добавить запись</string>
+    <string name="delete_record">Удалить запись</string>
 </resources>
