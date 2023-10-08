@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBEX7 {
-    private static final String DB_NAME = "mydb";
+    private static final String DB_NAME = "mydb2";
     private static final int DB_VERSION = 1;
 
     // имя таблицы компаний, поля и запрос создания

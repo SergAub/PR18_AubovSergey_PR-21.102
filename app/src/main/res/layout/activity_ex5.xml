@@ -4,8 +4,16 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EX5"
+        android:textSize="30dp"
+        android:layout_margin="10dp"/>
+
     <Button
-        android:layout_marginTop="15dp"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:backgroundTint="@color/green"
@@ -17,7 +25,7 @@
     <ListView
         android:id="@+id/lvSimple"
         android:layout_width="match_parent"
-        android:layout_height="560dp"></ListView>
+        android:layout_height="510dp"></ListView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
