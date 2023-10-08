@@ -6,12 +6,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class EX2 extends AppCompatActivity {
 
     // имена атрибутов для Map
     final String ATTRIBUTE_NAME_TEXT = "text";
@@ -19,11 +20,15 @@ public class MainActivity extends AppCompatActivity {
     final String ATTRIBUTE_NAME_IMAGE = "image";
 
     ListView lvSimple;
+    Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_ex2);
+
+        btnNext = findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(v -> {next();});
 
         String[] texts = { "sometext 1", "sometext 2", "sometext 3",
                 "sometext 4", "sometext 5" };
@@ -49,11 +54,16 @@ public class MainActivity extends AppCompatActivity {
         int[] to = { R.id.tvText, R.id.cbChecked, R.id.ivImg, R.id.cbChecked };
 
         // создаем адаптер
-        SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.item,
+        SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.itemex2,
                 from, to);
 
         // определяем список и присваиваем ему адаптер
         lvSimple = (ListView) findViewById(R.id.lvSimple);
         lvSimple.setAdapter(sAdapter);
+    }
+
+    public void next(){
+        Intent intent = new Intent(this, EX3.class);
+        startActivity(intent);
     }
 }
